@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Home | McEneaney Engineering{% endblock %}
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <h1>McEneaney Engineering</h1>
+        <h2>Innovative Engineering. Lasting Impact.</h2>
+        <p>
+            Ireland’s most versatile engineering firm, providing integrated solutions across every major discipline—civil, mechanical, electrical, software, environmental, and more.
+        </p>
+        <a href="{{ url_for('departments') }}" class="cta-btn">Explore Departments</a>
+    </div>
+</section>
+<section class="features container">
+    <div>
+        <h2>Why Partner With Us?</h2>
+        <ul>
+            <li>Nationwide reputation for excellence</li>
+            <li>Expert teams in all engineering domains</li>
+            <li>Cutting-edge solutions with a legacy of trust</li>
+            <li>ISO-certified safety and quality standards</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Our Commitment</h2>
+        <ul>
+            <li>Collaboration & transparency</li>
+            <li>Client-focused delivery</li>
+            <li>Future-ready technology</li>
+        </ul>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Projects | McEneaney Engineering{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Selected Projects</h1>
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Project 1">
+            <h3>National Infrastructure Upgrade</h3>
+            <p>Multi-disciplinary delivery of bridges, roads, and smart city utilities.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Project 2">
+            <h3>Renewable Energy Facilities</h3>
+            <p>Engineering and installation of wind and solar farms across Ireland.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Project 3">
+            <h3>Custom Automation Solutions</h3>
+            <p>Design and deployment of robotics for advanced manufacturing clients.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </div>
+</div>
+{% endblock %}

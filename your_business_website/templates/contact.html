@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Contact | McEneaney Engineering{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Contact Us</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <form method="POST" id="contact-form" novalidate>
+        <label>Name:</label>
+        <input type="text" name="name" required>
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <label>Message:</label>
+        <textarea name="message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-details">
+        <p><strong>Address:</strong> 123 Engineering Park, Dublin, Ireland</p>
+        <p><strong>Email:</strong> info@mceneaney.ie</p>
+        <p><strong>Phone:</strong> +353 1 234 5678</p>
+    </div>
+</div>
+{% endblock %}
